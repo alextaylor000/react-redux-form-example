@@ -27,7 +27,8 @@ class UserForm extends Component {
 
         <h3>Employment History</h3>
         <Form model='employmentHistory'>
-          <p>Please provide 2 years of employment history.</p>
+          <p>6 months of employment history is required.</p>
+          <p><strong>Total months:</strong> {employmentHistory.totalMonths} / 6</p>
           {employmentHistory.employers.map((employer, index) => {
             return (
               <div key={index} style={{ border: '1px solid green', margin: 15, padding: 30 }}>
@@ -40,6 +41,7 @@ class UserForm extends Component {
                 <Field model={track('employmentHistory.employers[].months', { id: employer.id})}>
                   <label>Number of months:</label>
                   <select>
+                    <option value={0}></option>
                     <option value={1}>1</option>
                     <option value={2}>2</option>
                     <option value={3}>3</option>

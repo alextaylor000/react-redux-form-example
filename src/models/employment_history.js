@@ -1,6 +1,6 @@
 const employmentHistory = {
   employers: [
-    { id: 0, name: 'Acme Corp.', months: 3 },
+    { id: 0, name: '', months: 0 },
   ]
 };
 
